@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-09T10:22:21.873061" rpa="false" schemaversion="5">
+<suite id="s1" name="Web2" source="C:\Users\junio\Desktop\Desafio_QA_Engineer_AiltonJunior\Desafio_QA_Engineer_Automation\Teste Web II\web2.robot">
+<test id="s1-t1" name="Caso de teste 1 - Etapa III - Automação de Teste Web II" line="11">
+<kw name="Abrir o navegador" owner="testeweb2" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:22.372821" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T10:22:22.372821" elapsed="3.616045"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T10:22:25.989865" elapsed="0.134438"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:22.372821" elapsed="3.751482"/>
+</kw>
+<kw name="Acessar o site &quot;http://www.trivago.com.br&quot;" owner="Pesquisa_trivago">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:26.130299" level="INFO">Opening url 'http://www.trivago.com.br'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T10:22:26.129305" elapsed="7.930493"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BTN_PESQUISAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-09T10:22:34.060798" elapsed="0.032728"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:26.126302" elapsed="7.967224"/>
+</kw>
+<kw name="Digitar o valor “Manaus” no campo de busca" owner="Pesquisa_trivago">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2024-02-09T10:22:34.093526" elapsed="4.648485"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:38.742011" level="INFO">Clicking element '//input[contains(@autocapitalize,'off')]'.</msg>
+<arg>locator=${PESQUISA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:38.742011" elapsed="0.324888"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:39.066899" level="INFO">Typing text 'Manaus' into text field '//input[contains(@autocapitalize,'off')]'.</msg>
+<arg>locator=${PESQUISA}</arg>
+<arg>text=${CIDADE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:39.066899" elapsed="0.250091"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>locator=//div[@class='flex items-center h-14'][contains(.,'ManausCidade · Amazonas, Brasil')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-09T10:22:39.316990" elapsed="0.400001"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>value=${TIME}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T10:22:39.716991" elapsed="0.002000"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:39.718991" level="INFO">Double clicking element '//div[@class='flex items-center h-14'][contains(.,'ManausCidade · Amazonas, Brasil')]'.</msg>
+<arg>locator=//div[@class='flex items-center h-14'][contains(.,'ManausCidade · Amazonas, Brasil')]</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:39.718991" elapsed="0.398491"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:34.093526" elapsed="6.023956"/>
+</kw>
+<kw name="Clicar no botão &quot;Pesquisar&quot; Selecionar a opção Ordenar por “Avaliação e Sugestões&quot;" owner="Pesquisa_trivago">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>value=${TIME}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T10:22:40.119483" elapsed="0.001995"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:40.122481" level="INFO">Double clicking element '//button[@type='button'][contains(.,'Pesquisar')]'.</msg>
+<arg>locator=${BTN_PESQUISAR}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:40.122481" elapsed="0.602434"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>value=${TIME}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T10:22:40.725932" elapsed="0.001983"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:40.728911" level="INFO">Clicking element '//option[@value='6'][contains(.,'Avaliação e sugestões')]'.</msg>
+<arg>locator=${ORDENAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:40.727915" elapsed="1.835312"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:42.564226" level="INFO">Double clicking element '//button[@type='button'][contains(.,'Pesquisar')]'.</msg>
+<arg>locator=${BTN_PESQUISAR}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:42.564226" elapsed="1.519247"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:40.118481" elapsed="3.964992"/>
+</kw>
+<kw name="Verifique o nome do primeiro da lista" owner="Pesquisa_trivago">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>value=${TIME}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T10:22:44.085469" elapsed="0.000999"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:44.087511" level="INFO">Verifying element '(//h2[@class='Heading_heading__xct3h Heading_h-s___YnjF ItemNameSection_nameWithFav__mi6zT'])[1]' contains exact text 'ibis budget Manaus'.</msg>
+<arg>locator=${NOME}</arg>
+<arg>expected=ibis budget Manaus</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-09T10:22:44.087511" elapsed="4.687099"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:44.084470" elapsed="4.696850"/>
+</kw>
+<kw name="Verifique a avaliação do primeiro da lista" owner="Pesquisa_trivago">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:48.954325" level="INFO">${AVALIACAO_TEXT} = 8.4 - Muito bom </msg>
+<var>${AVALIACAO_TEXT}</var>
+<arg>locator=${AVALIACAO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:48.786320" elapsed="0.168005"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:48.956323" level="INFO">Verifying element '(//strong[contains(@class,'leading-none')])[1]' contains exact text '8.4 - Muito bom '.</msg>
+<arg>locator=${AVALIACAO}</arg>
+<arg>expected=${AVALIACAO_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-09T10:22:48.955331" elapsed="0.054609"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Avaliação: ${AVALIACAO_TEXT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-09T10:22:49.009940" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:48.785317" elapsed="0.225623"/>
+</kw>
+<kw name="Verifique o valor do primeiro da lista" owner="Pesquisa_trivago">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T10:22:49.497834" level="INFO">${VALOR_ATUAL} = R$ 195</msg>
+<var>${VALOR_ATUAL}</var>
+<arg>locator=${VALOR}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T10:22:49.012393" elapsed="0.485441"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Valor atual: ${VALOR_ATUAL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-09T10:22:49.497834" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:49.011391" elapsed="0.486443"/>
+</kw>
+<kw name="Fechar navegador" owner="testeweb2" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T10:22:49.497834" elapsed="2.688311"/>
+</kw>
+<status status="PASS" start="2024-02-09T10:22:49.497834" elapsed="2.688311"/>
+</kw>
+<doc>Esse teste visa fazer pesquisa no site triago</doc>
+<tag>pesquisa</tag>
+<status status="PASS" start="2024-02-09T10:22:22.372821" elapsed="29.813324"/>
+</test>
+<doc>Esse teste visa fazer pesquisa no site triago</doc>
+<status status="PASS" start="2024-02-09T10:22:21.883037" elapsed="30.303108"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">pesquisa</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Web2">Web2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
